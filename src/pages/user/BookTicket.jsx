@@ -104,7 +104,7 @@ const BookTicketPage = () => {
         },
         {
           headers: {
-            Authorization: `Bearer ${token}`, // Attach token as a Bearer token
+            Authorization: `Bearer ${ getToken('token') }`, // Attach token as a Bearer token
           },
         }
       );

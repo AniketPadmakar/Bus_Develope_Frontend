@@ -12,6 +12,7 @@ import UserDashboard from './pages/user/Dashboard';
 import UserViewBuses from './pages/user/Viewbuses';
 import UserViewTickets from './pages/user/Viewtickets';
 import UserViewTicketDetails from './pages/user/ViewTicketDetails.jsx';
+import BookTicket from './pages/user/BookTicket';
 // import About from "./routes/About";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/user-view-buses" element={<UserViewBuses />} />
         <Route path="/user-view-tickets" element={<UserViewTickets />} />
         <Route path="/user-view-ticket-details/:ticketId" element={<UserViewTicketDetails />} />
+        <Route path="/book-ticket/:busName/:timing/:from/:to/:busId/:bookedSeats" element={<BookTicket />} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
     </Router>
