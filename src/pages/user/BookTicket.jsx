@@ -91,6 +91,8 @@ const BookTicketPage = () => {
       return;
     }
 
+    console.log('Booking ticket for seat:', selectedSeat);
+
     try {
       const response = await axios.post(
         `${hostURL.link}/api/user/book-ticket`,
@@ -104,7 +106,7 @@ const BookTicketPage = () => {
         },
         {
           headers: {
-            Authorization: `Bearer ${ getToken('token') }`, // Attach token as a Bearer token
+            Authorization: `Bearer ${token}`, // Attach token as a Bearer token
           },
         }
       );
