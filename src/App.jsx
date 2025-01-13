@@ -7,6 +7,7 @@ import AddBus from './pages/admin/AddBus';
 import AdminViewBuses from './pages/admin/ViewBuses';
 import UserSignin from './pages/user/SigninSignup/Signin';
 import UserSignup from './pages/user/SigninSignup/Signup';
+import UserDashboard from './pages/user/Dashboard';
 // import About from "./routes/About";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/admin-view-buses" element={<AdminViewBuses />} />
         <Route path="/user-signin" element={<UserSignin />} />
         <Route path="/user-signup" element={<UserSignup />} />
+        <Route path="/user-dash" element={<UserDashboard />} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
     </Router>

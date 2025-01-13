@@ -27,8 +27,8 @@ const Signin = () => {
 
             console.log("Successfully Logged INnn");
 
-            // Redirect to the patient dashboard page
-            navigate('/home');
+            // Redirect to the user dashboard page
+            navigate('/user-dash');
         } catch (error) {
             console.error('Error making API call:', error);
 

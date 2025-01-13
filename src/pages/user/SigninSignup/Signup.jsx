@@ -26,7 +26,7 @@ const Signup = () => {
       const value = response.data.token;
       setToken(value);
 
-      navigate("/patient-details");
+      navigate("/user-dash");
     } catch (error) {
       console.error("Error making API call:", error);
 
