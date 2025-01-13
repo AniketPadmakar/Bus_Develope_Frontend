@@ -60,7 +60,7 @@ const UserDashboard = () => {
     <Container>
       <OptionsWrapper>
         <Title>User Dashboard</Title>
-        <OptionButton onClick={() => handleNavigation('/view-buses')}>
+        <OptionButton onClick={() => handleNavigation('/user-view-buses')}>
           View Buses
         </OptionButton>
         <OptionButton onClick={() => handleNavigation('/view-tickets')}>
