@@ -60,7 +60,7 @@ const Menu = () => {
       <OptionsWrapper>
         <Title>Menu</Title>
         <OptionButton onClick={() => handleNavigation('/add-bus')}>Add Bus</OptionButton>
-        <OptionButton onClick={() => handleNavigation('/view-buses')}>View Buses</OptionButton>
+        <OptionButton onClick={() => handleNavigation('/admin-view-buses')}>View Buses</OptionButton>
         <OptionButton onClick={() => handleNavigation('/logout')}>Logout</OptionButton>
       </OptionsWrapper>
     </Container>
