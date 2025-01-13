@@ -63,7 +63,7 @@ const UserDashboard = () => {
         <OptionButton onClick={() => handleNavigation('/user-view-buses')}>
           View Buses
         </OptionButton>
-        <OptionButton onClick={() => handleNavigation('/view-tickets')}>
+        <OptionButton onClick={() => handleNavigation('/user-view-tickets')}>
           View Tickets
         </OptionButton>
         <OptionButton onClick={() => handleNavigation('/submit-query')}>

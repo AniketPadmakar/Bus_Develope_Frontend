@@ -10,6 +10,8 @@ import UserSignin from './pages/user/SigninSignup/Signin';
 import UserSignup from './pages/user/SigninSignup/Signup';
 import UserDashboard from './pages/user/Dashboard';
 import UserViewBuses from './pages/user/Viewbuses';
+import UserViewTickets from './pages/user/Viewtickets';
+import UserViewTicketDetails from './pages/user/ViewTicketDetails.jsx';
 // import About from "./routes/About";
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
         <Route path="/user-signup" element={<UserSignup />} />
         <Route path="/user-dash" element={<UserDashboard />} />
         <Route path="/user-view-buses" element={<UserViewBuses />} />
+        <Route path="/user-view-tickets" element={<UserViewTickets />} />
+        <Route path="/user-view-ticket-details/:ticketId" element={<UserViewTicketDetails />} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
     </Router>
