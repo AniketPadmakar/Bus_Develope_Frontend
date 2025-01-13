@@ -92,8 +92,26 @@ const ViewBuses = () => {
   }, []);
 
   // Redirect to the booking page with the selected bus ID
-  const handleBookTicket = (busId) => {
-    navigate(`/book-ticket/${busId}`);
+  const handleBookTicket = async (busId, busName, timing, from, to) => {
+    try {
+      // Call the backend to get the booked seats
+      const response = await axios.post(`${hostURL.link}/api/user/get-booked-seats`, { busId });
+      
+      if (response.status === 200) {
+        const bookedSeats = response.data.bookedSeats; // Comma-separated booked seats
+        
+        // Navigate to the booking page with booked seats as a parameter
+        navigate(
+          `/book-ticket/${busName}/${timing}/${from}/${to}/${busId}/${bookedSeats}`
+        );
+      } else {
+        console.error('Failed to fetch booked seats:', response.data);
+        alert('Could not fetch booked seats. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error while fetching booked seats:', error);
+      alert('An error occurred. Please try again later.');
+    }
   };
 
   return (
@@ -109,7 +127,7 @@ const ViewBuses = () => {
               <BusDetails>From: {bus.arrivalFrom}</BusDetails>
               <BusDetails>Destination: {bus.destination}</BusDetails>
             </BusInfo>
-            <BookButton onClick={() => handleBookTicket(bus._id)}>
+            <BookButton onClick={() => handleBookTicket(bus._id, bus.busName, bus.timing, bus.arrivalFrom, bus.destination)}>
               Book Ticket
             </BookButton>
           </BusCard>
