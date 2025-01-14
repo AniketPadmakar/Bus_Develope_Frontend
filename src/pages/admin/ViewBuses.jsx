@@ -120,7 +120,7 @@ const ViewBuses = () => {
   };
 
   const handleUpdate = (busId) => {
-    navigate(`/update-bus/${busId}`);
+    navigate(`/admin-update-bus/${busId}`);
   };
 
   const handleViewTickets = (busId) => {

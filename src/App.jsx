@@ -6,6 +6,7 @@ import AdminDashboard from './pages/admin/Dashboard';
 import AddBus from './pages/admin/AddBus';
 import AdminViewBuses from './pages/admin/ViewBuses';
 import AdminViewTickets from './pages/admin/ViewTickets';
+import AdminUpdateBus from './pages/admin/UpdateBus';
 import UserSignin from './pages/user/SigninSignup/Signin';
 import UserSignup from './pages/user/SigninSignup/Signup';
 import UserDashboard from './pages/user/Dashboard';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/add-bus" element={<AddBus />} />
         <Route path="/admin-view-buses" element={<AdminViewBuses />} />
         <Route path="/admin-view-tickets/:busId" element={<AdminViewTickets />} />
+        <Route path="/admin-update-bus/:busId" element={<AdminUpdateBus />} />
         <Route path="/user-signin" element={<UserSignin />} />
         <Route path="/user-signup" element={<UserSignup />} />
         <Route path="/user-dash" element={<UserDashboard />} />
