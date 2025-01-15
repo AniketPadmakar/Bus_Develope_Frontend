@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { deleteToken } from "../../data/Token";
 
 // Styled Components
 const Container = styled.div`
@@ -52,6 +53,12 @@ const OptionButton = styled.button`
 const UserDashboard = () => {
   const navigate = useNavigate();
 
+    const handleLogout = () => {
+      deleteToken('token'); // Execute the deleteToken function
+      navigate('/'); // Navigate to the logout route
+    };
+  
+
   const handleNavigation = (path) => {
     navigate(path);
   };
@@ -69,6 +76,7 @@ const UserDashboard = () => {
         <OptionButton onClick={() => handleNavigation('/submit-query')}>
           Submit Query
         </OptionButton>
+        <OptionButton onClick={handleLogout}>Logout</OptionButton>
       </OptionsWrapper>
     </Container>
   );

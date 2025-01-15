@@ -1,7 +1,7 @@
-// Required dependencies: react-router-dom, styled-components
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { deleteToken } from "../../data/Token";
 
 const Container = styled.div`
   display: flex;
@@ -51,17 +51,18 @@ const OptionButton = styled.button`
 const Menu = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = (path) => {
-    navigate(path);
+  const handleLogout = () => {
+    deleteToken('token'); // Execute the deleteToken function
+    navigate('/'); // Navigate to the logout route
   };
 
   return (
     <Container>
       <OptionsWrapper>
         <Title>Menu</Title>
-        <OptionButton onClick={() => handleNavigation('/add-bus')}>Add Bus</OptionButton>
-        <OptionButton onClick={() => handleNavigation('/admin-view-buses')}>View Buses</OptionButton>
-        <OptionButton onClick={() => handleNavigation('/logout')}>Logout</OptionButton>
+        <OptionButton onClick={() => navigate('/add-bus')}>Add Bus</OptionButton>
+        <OptionButton onClick={() => navigate('/admin-view-buses')}>View Buses</OptionButton>
+        <OptionButton onClick={handleLogout}>Logout</OptionButton>
       </OptionsWrapper>
     </Container>
   );
