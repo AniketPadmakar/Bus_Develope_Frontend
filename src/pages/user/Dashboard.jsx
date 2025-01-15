@@ -73,9 +73,9 @@ const UserDashboard = () => {
         <OptionButton onClick={() => handleNavigation('/user-view-tickets')}>
           View Tickets
         </OptionButton>
-        <OptionButton onClick={() => handleNavigation('/submit-query')}>
+        {/* <OptionButton onClick={() => handleNavigation('/submit-query')}>
           Submit Query
-        </OptionButton>
+        </OptionButton> */}
         <OptionButton onClick={handleLogout}>Logout</OptionButton>
       </OptionsWrapper>
     </Container>
